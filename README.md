@@ -11,7 +11,7 @@ GN 的编年史：从 2022 年前序，到 2023 年 4 月操作系统课程，�
 3. 在 Actions 中运行 **Deploy GN Chronicle**，或推送一次新提交触发发布。
 4. 发布成功后访问 `https://sjtu-tes.github.io/gn-chronicle/`。
 
-当前文件是待发布版本；不能仅凭此 README 判断远端已创建或上线。
+项目仓库：`SJTU-TES/gn-chronicle`。站点地址：[GN 编年史](https://sjtu-tes.github.io/gn-chronicle/)。每次发布的结果可在仓库 Actions 中查看。
 
 ## 更新记录
 
