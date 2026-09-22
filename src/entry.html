@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="theme-color" content="#f4f2eb">
+    <title>岁序 · GN Chronicle</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/mark.svg">
+    <link rel="stylesheet" href="../assets/chronicle.css">
+    <script type="module" src="../assets/chronicle.js"></script>
+  </head>
+  <body>
+    <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="icon-spark" viewBox="0 0 32 32"><path d="M16 2v28M2 16h28M6.1 6.1l19.8 19.8M6.1 25.9 25.9 6.1" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="16" cy="16" r="5" fill="currentColor"/></symbol>
+        <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      </defs>
+    </svg>
+
+    <section id="entry-screen" class="entry-screen" aria-labelledby="entry-title">
+      <a class="entry-home small-label" href="../"><span aria-hidden="true">↖</span> 返回主页</a>
+      <div class="entry-decoration" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="entry-card">
+        <svg class="entry-spark" aria-hidden="true"><use href="#icon-spark"></use></svg>
+        <p class="eyebrow">A SMALL DOOR TO THE PAST</p>
+        <h1 id="entry-title">岁序<span class="entry-period">.</span></h1>
+        <p class="entry-intro">一些一起走过的路，一些值得留下的时刻。</p>
+        <form id="entry-form">
+          <label for="entry-password">输入访问口令</label>
+          <p id="entry-hint" class="entry-hint">还记得第一次成立群的那个年月吗？</p>
+          <div class="entry-input-wrap">
+            <input id="entry-password" name="chronicle-passcode" type="password" inputmode="numeric" autocomplete="off" placeholder="六位口令" minlength="6" maxlength="6" pattern="[0-9]{6}" required aria-describedby="entry-hint entry-error">
+            <button id="entry-submit" type="submit" aria-label="打开编年史"><svg aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+          </div>
+          <p id="entry-error" class="entry-error" role="status" aria-live="polite"></p>
+        </form>
+        <p class="entry-footnote">GN <span>·</span> OUR SHARED ARCHIVE</p>
+        <noscript><p class="noscript-message">请启用 JavaScript，以打开这本编年史。</p></noscript>
+      </div>
+      <p class="entry-edition">GN 编年史 <span>／</span> VOL. 01</p>
+    </section>
+
+    <div id="chronicle-content" hidden inert></div>
+  </body>
+</html>

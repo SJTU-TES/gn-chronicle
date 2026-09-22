@@ -1,4 +1,4 @@
-name: Deploy GN Chronicle
+name: Deploy site
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Build timeline
+      - name: Build site
         run: node scripts/build.mjs
       - uses: actions/upload-pages-artifact@v3
         with:

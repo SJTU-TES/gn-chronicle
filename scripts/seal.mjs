@@ -1,0 +1,12 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { sealBundle } from '../assets/vault.mjs';
+import { renderArchive } from './render.mjs';
+const root = new URL('../', import.meta.url);
+const password = process.env.CHRONICLE_PASSWORD;
+if (!password) throw new Error('Set CHRONICLE_PASSWORD in this process before sealing.');
+const data = JSON.parse(await readFile(new URL('.private/chronicle.json', root), 'utf8'));
+const template = await readFile(new URL('.private/chronicle-template.html', root), 'utf8');
+const html = renderArchive(data, template);
+const envelope = await sealBundle({ html, source: { data, template } }, password);
+await writeFile(new URL('assets/archive.enc.json', root), JSON.stringify(envelope) + '\n');
+console.log('Encrypted archive updated.');
